@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import Nav from '../components/index/nav.vue'
 import Footer from "../components/index/footer.vue";
-// import Icon1 from "../static/task/icon01.png";
-// import Icon2 from "../static/task/icon02.png";
-// import Icon3 from "../static/task/icon03.png";
-// import Bg from "../static/task/bg.png";
+import Icon1 from "../static/task/icon01.png";
+import Icon2 from "../static/task/icon02.png";
+import Icon3 from "../static/task/icon03.png";
+import Bg from "../static/task/bg.png";
 
 </script>
 
@@ -33,7 +33,8 @@ import Footer from "../components/index/footer.vue";
       <VanImage
           width="80%"
           height="75%"
-          style="padding-left: 20px"/>
+          style="padding-left: 20px"
+          :src="Bg" />
     </div>
 
     <div class="order">
@@ -41,25 +42,25 @@ import Footer from "../components/index/footer.vue";
         <VanImage
             width="50"
             height="50"
-             />
+            :src="Icon1" />
         <div>
           <div class="find">我有需求找人帮忙</div>
           <div class="message">省心发布 需求匹配 等人接单</div>
         </div>
 
-        <VanIcon />
+        <VanIcon :name="Icon3"/>
       </div>
       <div class="release">
         <VanImage
             width="50"
             height="50"
-             />
+            :src="Icon2" />
         <div>
           <div class="find">我有能力, 接单赚钱</div>
           <div class="message">技能展示 技能匹配 找你帮忙</div>
         </div>
 
-        <VanIcon />
+        <VanIcon :name="Icon3"/>
       </div>
     </div>
 
