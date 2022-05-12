@@ -5,11 +5,12 @@ import Icon1 from "../static/task/icon01.png";
 import Icon2 from "../static/task/icon02.png";
 import Icon3 from "../static/task/icon03.png";
 import Bg from "../static/task/bg.png";
+import Inter from "../components/index/inter.vue"
 
 </script>
 
 <template>
-  <Nav />
+  <Nav><Inter /></Nav>
   <div class="content">
     <div style="height: 10%;padding: 20px">
       <div class="title">发需求</div>
@@ -31,7 +32,7 @@ import Bg from "../static/task/bg.png";
       </van-notice-bar>
 
       <VanImage
-          width="80%"
+          width="70%"
           height="75%"
           style="padding-left: 20px"
           :src="Bg" />

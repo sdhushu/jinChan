@@ -16,6 +16,11 @@ const router = createRouter({
             path: '/task',
             name: 'task',
             component: ()=> import('../page/task.vue')
+        },
+        {
+            path: '/my',
+            name: 'my',
+            component: ()=> import('../page/my.vue')
         }
     ]
 })

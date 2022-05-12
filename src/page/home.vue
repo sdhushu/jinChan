@@ -2,6 +2,7 @@
 import {ref} from "vue";
 import Nav from '../components/index/nav.vue';
 import Footer from '../components/index/footer.vue';
+import Inter from "../components/index/inter.vue"
 
 const themeVars = {
   cardBackgroundColor:"white",
@@ -11,7 +12,7 @@ const themeVars = {
 </script>
 
 <template>
-    <Nav />
+  <Nav ><Inter /></Nav>
 
     <div class="content">
       <van-notice-bar

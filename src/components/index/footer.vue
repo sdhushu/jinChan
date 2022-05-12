@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import {ref} from 'vue';
+import Create from "../../static/footer/create.png"
+import Make from "../../static/footer/make.png"
+import My from "../../static/footer/my.png"
 
 const active = ref(0);
 const icon = {
@@ -11,15 +14,13 @@ const icon = {
 
 <template>
   <div class="footer">
-    <van-tabbar v-model="active">
-      <van-tabbar-item badge="3">
-        <span @click="()=> {$router.push('/index')}">做任务</span>
-        <template #icon="props">
-          <img :src="props.active ? icon.active : icon.inactive" alt="img" />
-        </template>
+    <van-tabbar v-model="active" style="height: 10%">
+      <van-tabbar-item badge="3" :icon="Make" to="/index" @click="()=> {$router.push('/index')}">
+       做任务
       </van-tabbar-item>
-      <van-tabbar-item icon="search" @click="()=> {$router.push('/task')}">发任务</van-tabbar-item>
-      <van-tabbar-item icon="setting-o">我的</van-tabbar-item>
+      <van-tabbar-item :icon="Create" @click="()=> {
+        $router.push('/task')}">发任务</van-tabbar-item>
+      <van-tabbar-item :icon="My" @click="()=> {$router.push('/my')}">我的</van-tabbar-item>
     </van-tabbar>
   </div>
 </template>
@@ -27,6 +28,6 @@ const icon = {
 
 <style scoped lang="less">
 .footer {
-  height: 10%;
+  height: 15%;
 }
 </style>
