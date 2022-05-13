@@ -31,6 +31,7 @@ const themeVars = {
           tag="诚信认证"
           :centered="true"
           class="card"
+          @click="()=> $router.push('/detail')"
         >
         </van-card>
 

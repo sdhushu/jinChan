@@ -1,7 +1,12 @@
 <script setup lang="ts">
-  import {ref} from "vue";
+  import {ref, defineProps} from "vue";
 
   const keyword = ref();
+  defineProps({
+    height: {
+      type: String
+    }
+  })
 </script>
 
 <template>
@@ -31,7 +36,7 @@
 
 <style scoped lang="less">
 .title {
-  height: 15%;
+  height: v-bind(height);
   .logo {
     height: 50%;
     display: flex;
